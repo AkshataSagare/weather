@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weather/presentations/tabs/home_screen/home_screen.dart';
-import 'package:weather/presentations/tabs/pick_location_screen/pick_location_screen.dart';
+import 'package:weather_app/presentations/tabs/home_screen/home_screen.dart';
+import 'package:weather_app/presentations/tabs/pick_location_screen/pick_location_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -10,7 +10,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   final List<Widget> _pages = [HomeScreen(), PickLocationScreen()];
 
   int selectedIndex = 0;
@@ -28,14 +27,14 @@ class _MainScreenState extends State<MainScreen> {
 
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled),
+            icon: Icon(Icons.home_filled), 
             label: "Home"
           ),
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
-            label: "Location"
-          )
-        ]
+            label: "Location",
+          ),
+        ],
       ),
     );
   }
