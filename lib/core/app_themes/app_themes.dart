@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   
-  static const Color deepBlue = Color(0xFF0D47A1);
-  static const Color primaryBlue = Color(0xFF1976D2);
-  static const Color mediumBlue = Color(0xFF2196F3);
-  static const Color lightBlue = Color(0xFF42A5F5);
-  static const Color paleBlue = Color(0xFF64B5F6);
-  static const Color softBlue = Color(0xFF90CAF9);
-  static const Color iceBlue = Color(0xFFBBDEFB);
-  static const Color mistBlue = Color(0xFFE3F2FD);
-  static const Color navyBlue = Color(0xFF1A237E);
-  static const Color steelBlue = Color(0xFF37474F);
-  static const Color slateBlue = Color(0xFF455A64);
-  static const Color grayBlue = Color(0xFF607D8B);
+  static const Color primaryBlue = Color(0xFF2196F3);
+  static const Color lightBlue = Color(0xFF64B5F6);
+  static const Color darkBlue = Color(0xFF1976D2);
+  static const Color skyBlue = Color(0xFF87CEEB);
+  static const Color cloudWhite = Color(0xFFF5F5F5);
+  static const Color stormGray = Color(0xFF455A64);
+  static const Color sunYellow = Color(0xFFFFC107);
+  static const Color sunsetOrange = Color(0xFFFF9800);
+  static const Color nightDark = Color(0xFF263238);
+  static const Color fogGray = Color(0xFF90A4AE);
 
   
   static ThemeData lightTheme = ThemeData(
@@ -21,23 +19,22 @@ class AppTheme {
     brightness: Brightness.light,
     
     
+    scaffoldBackgroundColor: darkBlue,
+    
     colorScheme: const ColorScheme.light(
       primary: primaryBlue,
-      secondary: lightBlue,
-      surface: mistBlue,
+      secondary: sunYellow,
+      surface: cloudWhite,
       onPrimary: Colors.white,
-      onSecondary: Colors.white,
-      onSurface: deepBlue,
-      error: Color(0xFF1976D2),
+      onSecondary: Colors.black87,
+      onSurface: Colors.white, 
+      error: Color(0xFFE57373),
       onError: Colors.white,
-      outline: mediumBlue,
-      surfaceContainerHighest : iceBlue,
-      onSurfaceVariant: slateBlue,
     ),
 
     
     appBarTheme: const AppBarTheme(
-      backgroundColor: primaryBlue,
+      backgroundColor: darkBlue, 
       foregroundColor: Colors.white,
       elevation: 0,
       centerTitle: true,
@@ -52,7 +49,7 @@ class AppTheme {
     cardTheme: CardThemeData(
       color: Colors.white,
       elevation: 4,
-      shadowColor: lightBlue.withValues(alpha:  0.3),
+      shadowColor: Colors.black26,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
@@ -63,63 +60,63 @@ class AppTheme {
       headlineLarge: TextStyle(
         fontSize: 32,
         fontWeight: FontWeight.bold,
-        color: deepBlue,
+        color: Colors.white, 
       ),
       headlineMedium: TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.w600,
-        color: deepBlue,
+        color: Colors.white, 
       ),
       titleLarge: TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.w600,
-        color: primaryBlue,
+        color: Colors.white, 
       ),
       titleMedium: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w500,
-        color: primaryBlue,
+        color: Colors.white, 
       ),
       bodyLarge: TextStyle(
         fontSize: 16,
-        color: slateBlue,
+        color: Colors.white, 
       ),
       bodyMedium: TextStyle(
         fontSize: 14,
-        color: grayBlue,
+        color: Colors.white70, 
       ),
       labelLarge: TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w500,
-        color: mediumBlue,
+        color: Colors.white, 
       ),
     ),
 
     
     iconTheme: const IconThemeData(
-      color: primaryBlue,
+      color: Colors.white, 
       size: 24,
     ),
 
     
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: mediumBlue,
+      backgroundColor: primaryBlue,
       foregroundColor: Colors.white,
       elevation: 4,
     ),
 
     
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: Colors.white,
-      selectedItemColor: primaryBlue,
-      unselectedItemColor: grayBlue,
+      backgroundColor: darkBlue, 
+      selectedItemColor: Colors.white,
+      unselectedItemColor: Colors.white60,
       elevation: 8,
       type: BottomNavigationBarType.fixed,
     ),
 
     
     dividerTheme: const DividerThemeData(
-      color: paleBlue,
+      color: Colors.white24, 
       thickness: 1,
     ),
   );
@@ -130,38 +127,37 @@ class AppTheme {
     brightness: Brightness.dark,
     
     
+    scaffoldBackgroundColor: darkBlue,
+    
     colorScheme: const ColorScheme.dark(
-      primary: softBlue,
-      secondary: paleBlue,
-      surface: Color(0xFF0A1929),
-      onPrimary: deepBlue,
-      onSecondary: deepBlue,
-      onSurface: softBlue,
-      error: Color(0xFF90CAF9),
-      onError: deepBlue,
-      outline: lightBlue,
-      surfaceContainerHighest: navyBlue,
-      onSurfaceVariant: iceBlue,
+      primary: lightBlue,
+      secondary: sunsetOrange,
+      surface: Color(0xFF1E1E1E),
+      onPrimary: Colors.black,
+      onSecondary: Colors.black,
+      onSurface: Colors.white,
+      error: Color(0xFFCF6679),
+      onError: Colors.black,
     ),
 
     
     appBarTheme: const AppBarTheme(
-      backgroundColor: navyBlue,
-      foregroundColor: softBlue,
+      backgroundColor: darkBlue, 
+      foregroundColor: Colors.white,
       elevation: 0,
       centerTitle: true,
       titleTextStyle: TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.w600,
-        color: softBlue,
+        color: Colors.white,
       ),
     ),
 
     
     cardTheme: CardThemeData(
-      color: const Color(0xFF1A2332),
+      color: const Color(0xFF2D2D2D),
       elevation: 4,
-      shadowColor: deepBlue.withValues(alpha:  0.4),
+      shadowColor: Colors.black54,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
@@ -172,63 +168,63 @@ class AppTheme {
       headlineLarge: TextStyle(
         fontSize: 32,
         fontWeight: FontWeight.bold,
-        color: softBlue,
+        color: Colors.white,
       ),
       headlineMedium: TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.w600,
-        color: softBlue,
+        color: Colors.white,
       ),
       titleLarge: TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.w600,
-        color: paleBlue,
+        color: Colors.white,
       ),
       titleMedium: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w500,
-        color: paleBlue,
+        color: Colors.white,
       ),
       bodyLarge: TextStyle(
         fontSize: 16,
-        color: iceBlue,
+        color: Colors.white,
       ),
       bodyMedium: TextStyle(
         fontSize: 14,
-        color: paleBlue,
+        color: Colors.white70,
       ),
       labelLarge: TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w500,
-        color: softBlue,
+        color: Colors.white,
       ),
     ),
 
     
     iconTheme: const IconThemeData(
-      color: softBlue,
+      color: lightBlue,
       size: 24,
     ),
 
     
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: lightBlue,
-      foregroundColor: deepBlue,
+      foregroundColor: Colors.black,
       elevation: 4,
     ),
 
     
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: Color(0xFF0A1929),
-      selectedItemColor: softBlue,
-      unselectedItemColor: grayBlue,
+      backgroundColor: darkBlue, 
+      selectedItemColor: lightBlue,
+      unselectedItemColor: Colors.white60,
       elevation: 8,
       type: BottomNavigationBarType.fixed,
     ),
 
     
     dividerTheme: const DividerThemeData(
-      color: steelBlue,
+      color: Colors.white24,
       thickness: 1,
     ),
   );
@@ -238,8 +234,8 @@ class AppTheme {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color(0xFF42A5F5), 
-      Color(0xFF90CAF9), 
+      Color(0xFF87CEEB), 
+      Color(0xFF98D8E8), 
     ],
   );
 
@@ -247,8 +243,8 @@ class AppTheme {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color(0xFF607D8B), 
       Color(0xFF78909C), 
+      Color(0xFF90A4AE), 
     ],
   );
 
@@ -256,8 +252,8 @@ class AppTheme {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color(0xFF1976D2), 
-      Color(0xFF42A5F5), 
+      Color(0xFF546E7A), 
+      Color(0xFF607D8B), 
     ],
   );
 
@@ -265,8 +261,8 @@ class AppTheme {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color(0xFF0D47A1), 
       Color(0xFF1A237E), 
+      Color(0xFF283593), 
     ],
   );
 
@@ -274,27 +270,25 @@ class AppTheme {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color(0xFF1976D2), 
-      Color(0xFF64B5F6), 
+      Color(0xFFFF9800), 
+      Color(0xFFFFB74D), 
     ],
   );
 
   
   static const Map<String, Color> weatherColors = {
-    'sunny': lightBlue,
-    'cloudy': grayBlue,
+    'sunny': sunYellow,
+    'cloudy': fogGray,
     'rainy': primaryBlue,
-    'stormy': deepBlue,
-    'snowy': iceBlue,
-    'foggy': steelBlue,
-    'windy': paleBlue,
+    'stormy': stormGray,
+    'snowy': cloudWhite,
+    'foggy': fogGray,
+    'windy': lightBlue,
   };
 
   
   static ElevatedButtonThemeData elevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      backgroundColor: primaryBlue,
-      foregroundColor: Colors.white,
       elevation: 4,
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       shape: RoundedRectangleBorder(
@@ -306,7 +300,7 @@ class AppTheme {
   
   static InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
     filled: true,
-    fillColor: mistBlue,
+    fillColor: Colors.white,
     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
@@ -314,7 +308,7 @@ class AppTheme {
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
-      borderSide: const BorderSide(color: paleBlue, width: 1),
+      borderSide: BorderSide.none,
     ),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
