@@ -23,15 +23,17 @@ class _MainScreenState extends State<MainScreen> {
         onTap: (index) => setState(() {
           selectedIndex = index;
         }),
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         currentIndex: selectedIndex,
 
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled), 
-            label: "Home"
+            icon: Icon(Icons.home_filled, size: 25),
+            label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.location_on),
+            icon: Icon(Icons.location_on, size: 25),
             label: "Location",
           ),
         ],
