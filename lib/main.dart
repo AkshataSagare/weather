@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/core/app_themes/app_themes.dart';
-import 'package:weather_app/presentations/main_screen.dart';
+import 'package:weather_app/presentations/tabs/home_screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
         title: 'Weather',
         theme:AppTheme.lightTheme ,
         darkTheme: AppTheme.darkTheme,
-        home: MainScreen(),
+        themeMode: ThemeMode.system,
+        home: HomeScreen(),
       );
   }
 }

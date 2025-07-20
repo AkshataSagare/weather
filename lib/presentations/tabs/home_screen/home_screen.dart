@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather/weather.dart';
-
+import 'package:weather_app/presentations/tabs/pick_location_screen/pick_location_screen.dart';
 import '../../../consts.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,17 +16,31 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    _wf.currentWeatherByCityName("Pune").then((w) {
+    super.initState();
+    updateWeather('Pune');
+  }
+
+  void updateWeather(String selectedCity) async {
+    _wf.currentWeatherByCityName(selectedCity).then((w) {
       setState(() {
         _weather = w;
       });
     });
-    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: _buildUI());
+    return Scaffold(
+      body: _buildUI(),
+      floatingActionButton: FloatingActionButton(
+        elevation: 1,
+        onPressed: () => _showPickLocationScreen(context),
+        child: Icon(Icons.location_searching_outlined),
+      ),
+
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterDocked,
+    );
   }
 
   Widget _buildUI() {
@@ -149,4 +163,14 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+  void _showPickLocationScreen(BuildContext context) async {
+ final selectedCity = await Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => PickLocationScreen(),
+                      ));
+                      if (selectedCity != null) {
+  updateWeather(selectedCity);
 }
+}
+}
+
+
