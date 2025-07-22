@@ -48,7 +48,28 @@ class _PickLocationScreenState extends State<PickLocationScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 25),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(Icons.arrow_back),
+                  ),
+                  Center(
+                    widthFactor: 2,
+                    child: Text(
+                      "Pick Location",
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
               SizedBox(
                 width: MediaQuery.sizeOf(context).width * 0.9,
                 child: TextField(
